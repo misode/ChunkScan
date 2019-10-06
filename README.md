@@ -1,7 +1,7 @@
 # ChunkScan
 Simple Chunk Scanning Library for Minecraft Data Packs
 
-This Data Pack provides an generic hook which runs for every chunk that is generated in the overworld or nether. It marks chunks by replacing bedrock at y=0 completely with barriers.
+This Data Pack provides a generic function tag which runs at every chunk that is generated in the overworld or nether. It marks chunks by replacing bedrock at y=0 with barriers.
 
 |Hooks|Description|
 |---|---|
