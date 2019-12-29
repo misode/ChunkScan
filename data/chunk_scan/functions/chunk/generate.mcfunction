@@ -8,6 +8,6 @@ execute at @s run kill @e[type=area_effect_cloud,distance=..1,tag=chunk_scan.chu
 execute at @s positioned ~16 ~ ~ if block ~ ~ ~ minecraft:bedrock run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[chunk_scan.chunk],Duration:2147483647}
 execute at @s positioned ~-16 ~ ~ if block ~ ~ ~ minecraft:bedrock run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[chunk_scan.chunk],Duration:2147483647}
 execute at @s positioned ~ ~ ~16 if block ~ ~ ~ minecraft:bedrock run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[chunk_scan.chunk],Duration:2147483647}
-execute at @s positioned ~ ~ ~-16 run if block ~ ~ ~ minecraft:bedrock run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[chunk_scan.chunk],Duration:2147483647}
+execute at @s positioned ~ ~ ~-16 if block ~ ~ ~ minecraft:bedrock run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[chunk_scan.chunk],Duration:2147483647}
 
 execute at @s run function #chunk_scan:generate
