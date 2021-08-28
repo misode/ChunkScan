@@ -1,6 +1,4 @@
 
-execute at @s run fill ~ 3 ~ ~15 3 ~15 stone
-
 execute at @s[tag=chunk_scan.chunk] run function chunk_scan:chunk/spread
 execute at @s run function chunk_scan:chunk/generate_2
 
