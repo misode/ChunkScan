@@ -1,20 +1,24 @@
-# ChunkScan
+# Chunk Scan
 Simple Chunk Scanning Library for Minecraft Data Packs
 
-This Data Pack provides a generic function tag which runs at every chunk that is generated in the overworld or nether. It marks chunks by replacing bedrock at y=0 with barriers.
+This Data Pack provides a generic function tag which runs at every chunk that is generated, aligned at the bottom of the world and at the mininium xz coords. Supports custom dimensions and any world height between -2048-2048.
+
+Chunk Scan depends on [LanternLoad](https://github.com/LanternMC/load).
 
 |Hooks|Description|
 |---|---|
-|`#cs:generate`|Called for every chunk generated in overworld or nether|
+|`#chunk_scan:v2/generate`| Called for every chunk generated |
 
 |Tags|Description|
 |---|---|
-|`cs.chunk`|Chunk Mmarkers. Used on area effect clouds|
-|`cs.disabled`|Players with this tag will not generate new terrain around them|
-|`cs.init`|Temporary tag used to align chunk markers|
+|`chunk_scan.chunk`| Permenent markers indicating a metachunk has been generated. |
+|`chunk_scan.gen`| Temporary markers indicating a regular chunk is ready to be generated. |
+|`chunk_scan.init`| Temporary tag used to align markers. |
+|`chunk_scan.disabled`| Players with this tag will not generate custom terrain around them |
 
 ## How to use
 The preferred way to use this library is to bundle it within your data pack
-1. Copy the `data/cs` folder to your data pack
-2. Add the `"cs:load"` value to `data/minecraft/tags/functions/load.json` or copy the file if you don't have it already
-3. Add your function to `data/cs/tags/generate.json`
+1. Install [LanternLoad](https://github.com/LanternMC/load) in your datapack
+2. Copy the `data/chunk_scan` folder into your data pack
+3. Merge the contents of `ChunkScan/data/load/tags/functions/load.json` and your own `data/load/tags/functions/load.json`
+4. Create your own generate function and add it to `data/chunk_scan/tags/v2/generate.json`. This will run in every chunk. Be sure to check conditions like the dimension you are in.
