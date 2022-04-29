@@ -22,3 +22,5 @@ The preferred way to use this library is to bundle it within your data pack
 2. Copy the `data/chunk_scan` folder into your data pack
 3. Merge the contents of `ChunkScan/data/load/tags/functions/load.json` and your own `data/load/tags/functions/load.json`
 4. Create your own generate function and add it to `data/chunk_scan/tags/v2/generate.json`. This will run in every chunk. Be sure to check conditions like the dimension you are in.
+
+For easier mangament of dependencies, check out my project [Datapack Build Manager](https://github.com/ICY105/DatapackBuildManager).
